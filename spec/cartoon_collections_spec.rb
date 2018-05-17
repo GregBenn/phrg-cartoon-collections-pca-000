@@ -1,4 +1,5 @@
 require "spec_helper"
+require 'pry'
 
 describe "Cartoon Collections" do
   describe "#roll_call_dwarves" do
@@ -59,6 +60,7 @@ describe "Cartoon Collections" do
 
     it "returns nil if the array does not contain a type of cheese" do
       no_cheese = ["ham", "cellphone", "computer"]
+      binding.pry
       expect(find_the_cheese(no_cheese)).to eq nil
     end
   end
